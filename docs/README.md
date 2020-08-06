@@ -1,4 +1,4 @@
-# P1 A peer-to-peer network
+# p1 A peer-to-peer network
 
 This is the first project exercise, and you should work on it in your teams.
 At the deadline, you either have to
@@ -12,8 +12,8 @@ the same protocol and should therefore be able to “talk” to each other.
 The protocol is text (and line) based and given by the following datatype of
 messages:
 
-```haskell id="P01" file="src/P01.hs"
-module P01 where
+```haskell
+module P1 where
 
 type HostName = Int
 type PortNumber = Int
@@ -34,13 +34,13 @@ for this task, you can use `read` and `show` for parsing and serialization.
 
 Transactions are just `Int`s here:
 
-```haskell id="P01"
+```haskell
 type Tx = Int
 ```
 
 and a peer is just a pair of host name and port number:
 
-```haskell id="P01"
+```haskell
 data Peer = Peer HostName PortNumber
     deriving (Show, Read, Eq, Ord)
 ```
