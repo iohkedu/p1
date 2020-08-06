@@ -15,9 +15,6 @@ messages:
 ```haskell
 module P1 where
 
-type HostName = Int
-type PortNumber = Int
-
 data Message = Connect HostName PortNumber
              | GetPeers
              | Status [Peer]
@@ -25,7 +22,7 @@ data Message = Connect HostName PortNumber
              | Oldtx Tx Tx
              | Quit
              | Unknown String
-             deriving(Read, Show)
+             deriving (Show, Read)
 
 ```
 
