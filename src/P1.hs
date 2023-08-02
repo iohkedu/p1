@@ -1,13 +1,14 @@
 module P1 where
 
-import Network
+import           Network.Simple.TCP (HostName, ServiceName)
+
 
 type Tx = Int
 
-data Peer = Peer HostName PortNumber
+data Peer = Peer HostName ServiceName
     deriving (Show, Read, Eq, Ord)
 
-data Message = Connect HostName PortNumber
+data Message = Connect HostName ServiceName
              | GetPeers
              | Status [Peer]
              | Newtx Tx
